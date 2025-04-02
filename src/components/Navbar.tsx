@@ -33,7 +33,10 @@ const Navbar = () => {
           <Link to="/contact" className="font-medium text-gray-600 hover:text-soluetude-600 transition-colors">
             Contact
           </Link>
-          <Link to="/inscription" className="font-medium text-gray-600 hover:text-soluetude-600 transition-colors">
+          <Link 
+            to="/inscription" 
+            className="font-medium text-white bg-soluetude-600 px-4 py-2 rounded-md hover:bg-soluetude-700 transition-colors"
+          >
             Inscription
           </Link>
         </nav>
@@ -85,7 +88,7 @@ const Navbar = () => {
             </Link>
             <Link
               to="/inscription"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-soluetude-600 hover:bg-gray-50"
+              className="block px-3 py-2 rounded-md text-base font-medium text-white bg-soluetude-600 hover:bg-soluetude-700"
               onClick={toggleMenu}
             >
               Inscription
