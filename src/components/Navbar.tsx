@@ -30,11 +30,11 @@ const Navbar = () => {
           <Link to="/services" className="font-medium text-gray-600 hover:text-soluetude-600 transition-colors">
             Nos services
           </Link>
-          <Link to="/tutors" className="font-medium text-gray-600 hover:text-soluetude-600 transition-colors">
-            Nos tuteurs
-          </Link>
           <Link to="/contact" className="font-medium text-gray-600 hover:text-soluetude-600 transition-colors">
             Contact
+          </Link>
+          <Link to="/inscription" className="font-medium text-gray-600 hover:text-soluetude-600 transition-colors">
+            Inscription
           </Link>
         </nav>
 
@@ -77,18 +77,18 @@ const Navbar = () => {
               Nos services
             </Link>
             <Link
-              to="/tutors"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-soluetude-600 hover:bg-gray-50"
-              onClick={toggleMenu}
-            >
-              Nos tuteurs
-            </Link>
-            <Link
               to="/contact"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-soluetude-600 hover:bg-gray-50"
               onClick={toggleMenu}
             >
               Contact
+            </Link>
+            <Link
+              to="/inscription"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-soluetude-600 hover:bg-gray-50"
+              onClick={toggleMenu}
+            >
+              Inscription
             </Link>
             <div className="pt-2">
               <Button asChild className="w-full bg-soluetude-600 hover:bg-soluetude-700">
