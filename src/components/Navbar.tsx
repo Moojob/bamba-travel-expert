@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Plane } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -16,7 +16,7 @@ const Navbar = () => {
       <div className="container flex items-center justify-between h-16">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <img src="/bamba-logo.png" alt="BAMBA Travel Expert" className="h-10" />
+          <img src="/lovable-uploads/5ddda8bb-1a0f-433f-8fb0-e7922184a460.png" alt="BAMBA Travel Expert" className="h-12" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -30,21 +30,21 @@ const Navbar = () => {
           <Link to="/services" className="font-medium text-gray-600 hover:text-bamba-navy transition-colors">
             Nos services
           </Link>
+          <Link to="/destinations" className="font-medium text-gray-600 hover:text-bamba-navy transition-colors">
+            Destinations
+          </Link>
           <Link to="/contact" className="font-medium text-gray-600 hover:text-bamba-navy transition-colors">
             Contact
-          </Link>
-          <Link 
-            to="/inscription" 
-            className="font-medium text-white bg-bamba-navy px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors"
-          >
-            Inscription
           </Link>
         </nav>
 
         {/* CTA Button */}
         <div className="hidden md:block">
           <Button asChild className="bg-bamba-navy hover:bg-opacity-90">
-            <Link to="/contact">Prendre rendez-vous</Link>
+            <Link to="/contact">
+              <Plane size={18} className="mr-2" />
+              Prendre rendez-vous
+            </Link>
           </Button>
         </div>
 
@@ -80,22 +80,25 @@ const Navbar = () => {
               Nos services
             </Link>
             <Link
+              to="/destinations"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-bamba-navy hover:bg-gray-50"
+              onClick={toggleMenu}
+            >
+              Destinations
+            </Link>
+            <Link
               to="/contact"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-bamba-navy hover:bg-gray-50"
               onClick={toggleMenu}
             >
               Contact
             </Link>
-            <Link
-              to="/inscription"
-              className="block px-3 py-2 rounded-md text-base font-medium text-white bg-bamba-navy hover:bg-opacity-90"
-              onClick={toggleMenu}
-            >
-              Inscription
-            </Link>
             <div className="pt-2">
               <Button asChild className="w-full bg-bamba-navy hover:bg-opacity-90">
-                <Link to="/contact" onClick={toggleMenu}>Prendre rendez-vous</Link>
+                <Link to="/contact" onClick={toggleMenu}>
+                  <Plane size={18} className="mr-2" />
+                  Prendre rendez-vous
+                </Link>
               </Button>
             </div>
           </div>
