@@ -53,17 +53,10 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				soluetude: {
-					50: '#f0f7ff',
-					100: '#e0efff',
-					200: '#baddff',
-					300: '#7dc2ff',
-					400: '#3aa0ff',
-					500: '#0a84ff',
-					600: '#0062d6',
-					700: '#0051b3',
-					800: '#004494',
-					900: '#00397a',
+				bamba: {
+					navy: '#003A5D', // Navy blue color from the logo
+					green: '#8DC63F', // Green color from the logo
+					red: '#E4252A',   // Red color from the logo
 				},
 			},
 			borderRadius: {
