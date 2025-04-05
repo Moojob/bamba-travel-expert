@@ -62,3 +62,39 @@
 .hero-gradient {
   background: linear-gradient(to right, #003A5D, #00284a);
 }
+
+/* Fix carousel text color for better visibility */
+.embla__slide__title {
+  @apply text-bamba-navy font-bold;
+}
+
+.embla__slide__content {
+  @apply text-gray-800;
+}
+
+/* Ensure heading visibility across the site, especially in carousels */
+h1, h2, h3, h4, h5, h6 {
+  @apply text-bamba-navy;
+}
+
+/* Override text color in dark backgrounds */
+.bg-bamba-navy h1,
+.bg-bamba-navy h2,
+.bg-bamba-navy h3,
+.bg-bamba-navy h4,
+.bg-bamba-navy h5,
+.bg-bamba-navy h6,
+.hero-gradient h1,
+.hero-gradient h2,
+.hero-gradient h3,
+.hero-gradient h4,
+.hero-gradient h5,
+.hero-gradient h6 {
+  @apply text-white;
+}
+
+/* Special styling for service titles */
+.bg-bamba-navy .text-bamba-green,
+.hero-gradient .text-bamba-green {
+  @apply text-bamba-green;
+}

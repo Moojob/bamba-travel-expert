@@ -1,41 +1,41 @@
 
 import Layout from "@/components/Layout";
 import SectionTitle from "@/components/SectionTitle";
-import { CheckCircle, Users, BookOpen, Award, Target, Heart } from "lucide-react";
+import { CheckCircle, Users, BookOpen, Award, Target, Heart, Globe, Map } from "lucide-react";
 
 const About = () => {
   const values = [
     {
       title: "Excellence",
-      description: "Nous visons l'excellence dans tous nos services éducatifs pour garantir les meilleurs résultats.",
-      icon: <Award className="h-8 w-8 text-soluetude-600" />,
+      description: "Nous visons l'excellence dans tous nos services pour garantir les meilleurs résultats pour votre projet d'études.",
+      icon: <Award className="h-8 w-8 text-bamba-navy" />,
     },
     {
       title: "Personnalisation",
-      description: "Nous adaptons notre approche aux besoins uniques de chaque élève pour maximiser son potentiel.",
-      icon: <Target className="h-8 w-8 text-soluetude-600" />,
+      description: "Nous adaptons notre approche aux besoins uniques de chaque étudiant pour maximiser ses chances de réussite.",
+      icon: <Target className="h-8 w-8 text-bamba-navy" />,
     },
     {
-      title: "Passion",
-      description: "Nos tuteurs sont passionnés par l'enseignement et transmettent cette passion à leurs élèves.",
-      icon: <Heart className="h-8 w-8 text-soluetude-600" />,
+      title: "Expertise internationale",
+      description: "Notre équipe possède une connaissance approfondie des systèmes éducatifs internationaux et des procédures d'immigration.",
+      icon: <Globe className="h-8 w-8 text-bamba-navy" />,
     },
     {
       title: "Engagement",
-      description: "Nous nous engageons pleinement dans la réussite académique et personnelle de chaque élève.",
-      icon: <CheckCircle className="h-8 w-8 text-soluetude-600" />,
+      description: "Nous nous engageons pleinement dans la réussite de votre projet d'études à l'étranger et d'immigration.",
+      icon: <CheckCircle className="h-8 w-8 text-bamba-navy" />,
     },
   ];
 
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 bg-soluetude-600 text-white">
+      <section className="relative py-20 bg-bamba-navy text-white">
         <div className="container">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">À propos de SoluEtude</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">À propos de BAMBA Travel Expert</h1>
             <p className="text-xl md:text-2xl">
-              Découvrez qui nous sommes et comment nous aidons les élèves à réaliser leur plein potentiel.
+              Découvrez qui nous sommes et comment nous aidons les étudiants à réaliser leur rêve d'études à l'étranger.
             </p>
           </div>
         </div>
@@ -51,29 +51,29 @@ const About = () => {
             <div>
               <SectionTitle 
                 title="Notre histoire"
-                subtitle="Comment SoluEtude est devenu un leader dans le soutien scolaire"
+                subtitle="Comment BAMBA Travel Expert est devenu un leader dans l'accompagnement des étudiants internationaux"
               />
               <div className="space-y-4 text-gray-700">
                 <p>
-                  Fondé en 2010 par un groupe d'enseignants passionnés, SoluEtude est né de la conviction que chaque élève mérite un accompagnement personnalisé pour réaliser son plein potentiel académique.
+                  Fondé en 2015 par un groupe de passionnés ayant eux-mêmes étudié à l'étranger, BAMBA Travel Expert est né de la conviction que chaque étudiant mérite un accompagnement personnalisé pour réaliser son projet d'études internationales.
                 </p>
                 <p>
-                  Au fil des années, nous avons développé une approche pédagogique unique qui combine expertise académique, méthodes d'enseignement innovantes et attention personnalisée aux besoins de chaque élève.
+                  Au fil des années, nous avons développé une expertise unique qui combine connaissance approfondie des systèmes éducatifs internationaux, maîtrise des procédures d'immigration et attention personnalisée aux besoins de chaque étudiant.
                 </p>
                 <p>
-                  Aujourd'hui, SoluEtude est fier d'avoir aidé des milliers d'élèves à améliorer leurs résultats scolaires, gagner en confiance et développer des compétences d'apprentissage qui leur serviront tout au long de leur vie.
+                  Aujourd'hui, BAMBA Travel Expert est fier d'avoir aidé des milliers d'étudiants à intégrer des établissements prestigieux à travers le monde, à obtenir leurs visas et à s'installer avec succès dans leur pays d'accueil.
                 </p>
               </div>
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
-                alt="Student studying" 
+                src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                alt="Students studying abroad" 
                 className="rounded-lg shadow-xl"
               />
-              <div className="absolute -bottom-6 -right-6 bg-soluetude-600 text-white p-6 rounded-lg shadow-lg hidden lg:block">
+              <div className="absolute -bottom-6 -right-6 bg-bamba-navy text-white p-6 rounded-lg shadow-lg hidden lg:block">
                 <div className="text-center">
-                  <h3 className="text-2xl font-bold">10+</h3>
+                  <h3 className="text-2xl font-bold">8+</h3>
                   <p>Années d'expérience</p>
                 </div>
               </div>
@@ -87,7 +87,7 @@ const About = () => {
         <div className="container">
           <SectionTitle 
             title="Nos valeurs"
-            subtitle="Les principes qui guident notre approche pédagogique"
+            subtitle="Les principes qui guident notre approche d'accompagnement"
             centered
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -109,7 +109,7 @@ const About = () => {
         <div className="container">
           <SectionTitle 
             title="Notre équipe"
-            subtitle="Des professionnels dédiés à la réussite de vos enfants"
+            subtitle="Des experts dédiés à la réussite de votre projet international"
             centered
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -121,9 +121,9 @@ const About = () => {
               />
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-1">Thomas Bernard</h3>
-                <p className="text-soluetude-600 mb-3">Fondateur & Directeur</p>
+                <p className="text-bamba-navy mb-3">Fondateur & Directeur</p>
                 <p className="text-gray-600">
-                  Ancien professeur de mathématiques avec plus de 15 ans d'expérience dans l'éducation.
+                  Ancien étudiant international avec plus de 10 ans d'expérience dans le conseil en éducation internationale.
                 </p>
               </div>
             </div>
@@ -135,9 +135,9 @@ const About = () => {
               />
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-1">Claire Dubois</h3>
-                <p className="text-soluetude-600 mb-3">Directrice Pédagogique</p>
+                <p className="text-bamba-navy mb-3">Conseillère en Immigration</p>
                 <p className="text-gray-600">
-                  Spécialiste en sciences de l'éducation avec une expertise dans les méthodes d'apprentissage innovantes.
+                  Spécialiste des procédures de visa et d'immigration pour étudiants internationaux.
                 </p>
               </div>
             </div>
@@ -149,9 +149,9 @@ const About = () => {
               />
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-1">Marc Lambert</h3>
-                <p className="text-soluetude-600 mb-3">Responsable des Tuteurs</p>
+                <p className="text-bamba-navy mb-3">Conseiller Éducatif</p>
                 <p className="text-gray-600">
-                  Enseignant expérimenté spécialisé dans le recrutement et la formation de tuteurs de qualité.
+                  Expert en systèmes éducatifs internationaux et programmes d'études à l'étranger.
                 </p>
               </div>
             </div>
@@ -160,24 +160,24 @@ const About = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-soluetude-600 text-white">
+      <section className="py-16 bg-bamba-navy text-white">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">5000+</div>
-              <p className="text-xl">Élèves accompagnés</p>
+              <div className="text-4xl md:text-5xl font-bold mb-2">3000+</div>
+              <p className="text-xl">Étudiants accompagnés</p>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">100+</div>
-              <p className="text-xl">Tuteurs qualifiés</p>
+              <div className="text-4xl md:text-5xl font-bold mb-2">20+</div>
+              <p className="text-xl">Pays de destination</p>
             </div>
             <div>
               <div className="text-4xl md:text-5xl font-bold mb-2">98%</div>
               <p className="text-xl">Taux de satisfaction</p>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">15+</div>
-              <p className="text-xl">Matières enseignées</p>
+              <div className="text-4xl md:text-5xl font-bold mb-2">300+</div>
+              <p className="text-xl">Partenaires universitaires</p>
             </div>
           </div>
         </div>

@@ -3,88 +3,89 @@ import Layout from "@/components/Layout";
 import SectionTitle from "@/components/SectionTitle";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Book, BookOpen, Target, Award, Clock, Users, Lightbulb, CheckCircle, ArrowRight, Sparkles } from "lucide-react";
+import { Book, BookOpen, Target, Award, Clock, Users, Lightbulb, CheckCircle, ArrowRight, Sparkles, GraduationCap, Briefcase, Globe, Map, Languages, Plane } from "lucide-react";
+import ServiceCard from "@/components/ServiceCard";
 
 const Services = () => {
   const primaryServices = [
     {
-      title: "Cours particuliers",
-      description: "Des séances individuelles avec un tuteur dédié pour un accompagnement sur mesure.",
-      icon: <Book className="h-10 w-10 text-soluetude-600" />,
+      title: "Études universitaires",
+      description: "Conseils et accompagnement pour intégrer les meilleures universités à l'étranger.",
+      icon: <GraduationCap className="h-10 w-10 text-bamba-navy" />,
       features: [
-        "Accompagnement personnalisé",
-        "Suivi régulier des progrès",
-        "Flexibilité des horaires",
-        "Adaptation au rythme de l'élève",
+        "Sélection des établissements adaptés",
+        "Préparation du dossier d'admission",
+        "Suivi des candidatures",
+        "Conseils sur les programmes d'études",
       ],
     },
     {
-      title: "Aide aux devoirs",
-      description: "Un soutien quotidien pour aider les élèves à accomplir leurs devoirs efficacement.",
-      icon: <BookOpen className="h-10 w-10 text-soluetude-600" />,
+      title: "Visa étudiant",
+      description: "Assistance complète pour l'obtention du visa étudiant et les démarches administratives.",
+      icon: <Briefcase className="h-10 w-10 text-bamba-navy" />,
       features: [
-        "Accompagnement régulier",
-        "Organisation et planification",
-        "Méthodes de travail efficaces",
-        "Vérification et correction",
+        "Constitution du dossier de visa",
+        "Préparation à l'entretien consulaire",
+        "Suivi de la demande",
+        "Conseils personnalisés",
       ],
     },
     {
-      title: "Préparation aux examens",
-      description: "Des programmes intensifs pour préparer les étudiants aux examens importants.",
-      icon: <Target className="h-10 w-10 text-soluetude-600" />,
+      title: "Logement étudiant",
+      description: "Solutions de logement adaptées à votre budget et à vos besoins durant vos études.",
+      icon: <Map className="h-10 w-10 text-bamba-navy" />,
       features: [
-        "Révision complète du programme",
-        "Entraînements aux examens",
-        "Techniques de gestion du stress",
-        "Méthodologie adaptée au type d'examen",
+        "Résidences universitaires",
+        "Colocation étudiante",
+        "Famille d'accueil",
+        "Accompagnement à distance",
       ],
     },
   ];
 
   const specializedServices = [
     {
-      title: "Cours en ligne",
-      description: "Des cours à distance pour un apprentissage flexible et accessible.",
-      icon: <Sparkles className="h-6 w-6 text-soluetude-600" />,
+      title: "Préparation linguistique",
+      description: "Cours de langues et préparation aux tests de langue requis pour étudier à l'étranger.",
+      icon: <Languages className="h-6 w-6 text-bamba-navy" />,
     },
     {
-      title: "Cours en groupe",
-      description: "Des sessions en petit groupe pour favoriser l'apprentissage collaboratif.",
-      icon: <Users className="h-6 w-6 text-soluetude-600" />,
+      title: "Programmes d'échange",
+      description: "Découvrez les programmes d'échange accessibles et enrichissants pour votre parcours.",
+      icon: <Globe className="h-6 w-6 text-bamba-navy" />,
     },
     {
-      title: "Stages intensifs",
-      description: "Des programmes concentrés pendant les vacances scolaires pour combler les lacunes.",
-      icon: <Clock className="h-6 w-6 text-soluetude-600" />,
+      title: "Bourses d'études",
+      description: "Identification et demande de bourses d'études pour financer votre projet international.",
+      icon: <Award className="h-6 w-6 text-bamba-navy" />,
     },
     {
-      title: "Cours de méthodologie",
-      description: "Des techniques d'étude efficaces pour améliorer l'organisation et la rétention.",
-      icon: <Lightbulb className="h-6 w-6 text-soluetude-600" />,
+      title: "Accompagnement à l'installation",
+      description: "Support complet pour faciliter votre arrivée et installation dans votre pays d'accueil.",
+      icon: <Plane className="h-6 w-6 text-bamba-navy" />,
     },
   ];
 
-  const subjects = [
-    "Mathématiques", "Français", "Anglais", "Physique-Chimie",
-    "SVT", "Histoire-Géographie", "Philosophie", "Économie",
-    "Espagnol", "Allemand", "Informatique", "Littérature",
+  const destinations = [
+    "Canada", "Royaume-Uni", "Australie", "États-Unis", 
+    "France", "Allemagne", "Espagne", "Italie",
+    "Suisse", "Belgique", "Irlande", "Nouvelle-Zélande",
   ];
 
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 bg-soluetude-600 text-white">
+      <section className="relative py-20 bg-bamba-navy text-white">
         <div className="container">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Nos services</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-bamba-green">Nos services</h1>
             <p className="text-xl md:text-2xl">
-              Découvrez notre gamme complète de services éducatifs conçus pour répondre aux besoins spécifiques de chaque élève.
+              Découvrez notre gamme complète de services conçus pour vous accompagner dans votre projet d'études à l'étranger.
             </p>
           </div>
         </div>
         <div className="absolute bottom-0 right-0 w-1/3 h-full bg-contain bg-no-repeat bg-right-bottom opacity-10"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')" }}>
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')" }}>
         </div>
       </section>
 
@@ -93,7 +94,7 @@ const Services = () => {
         <div className="container">
           <SectionTitle 
             title="Nos services principaux"
-            subtitle="Des solutions éducatives adaptées à tous les besoins"
+            subtitle="Des solutions adaptées pour votre projet d'études à l'étranger"
             centered
           />
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -102,20 +103,20 @@ const Services = () => {
                 <div className="mb-6 flex justify-center">
                   {service.icon}
                 </div>
-                <h3 className="text-2xl font-semibold mb-4 text-center">{service.title}</h3>
+                <h3 className="text-2xl font-semibold mb-4 text-center text-bamba-navy">{service.title}</h3>
                 <p className="text-gray-600 mb-6 text-center">{service.description}</p>
                 
                 <div className="space-y-3 mb-8">
                   {service.features.map((feature, fIndex) => (
                     <div key={fIndex} className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-bamba-green mr-2 flex-shrink-0" />
                       <span>{feature}</span>
                     </div>
                   ))}
                 </div>
                 
                 <div className="text-center">
-                  <Button asChild className="bg-soluetude-600 hover:bg-soluetude-700">
+                  <Button asChild className="bg-bamba-navy hover:bg-bamba-navy/90">
                     <Link to="/contact">Demander des infos</Link>
                   </Button>
                 </div>
@@ -130,18 +131,18 @@ const Services = () => {
         <div className="container">
           <SectionTitle 
             title="Services spécialisés"
-            subtitle="Des options complémentaires pour enrichir l'expérience d'apprentissage"
+            subtitle="Des options complémentaires pour enrichir votre expérience internationale"
             centered
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {specializedServices.map((service, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-md border border-gray-100 text-center">
-                <div className="bg-soluetude-100 w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center">
+                <div className="bg-blue-100 w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-bamba-navy">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
-                <Link to="/contact" className="text-soluetude-600 hover:text-soluetude-800 inline-flex items-center font-medium">
+                <Link to="/contact" className="text-bamba-navy hover:text-bamba-navy/80 inline-flex items-center font-medium">
                   En savoir plus <ArrowRight size={16} className="ml-1" />
                 </Link>
               </div>
@@ -150,41 +151,41 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Subjects Section */}
+      {/* Destinations Section */}
       <section className="section-padding bg-white">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <SectionTitle 
-                title="Matières enseignées"
-                subtitle="Nous couvrons un large éventail de disciplines pour tous les niveaux scolaires"
+                title="Destinations populaires"
+                subtitle="Nous vous accompagnons dans vos projets d'études vers de nombreuses destinations"
               />
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                {subjects.map((subject, index) => (
+                {destinations.map((destination, index) => (
                   <div key={index} className="flex items-center">
-                    <Award className="h-5 w-5 text-soluetude-600 mr-2" />
-                    <span>{subject}</span>
+                    <Globe className="h-5 w-5 text-bamba-navy mr-2" />
+                    <span>{destination}</span>
                   </div>
                 ))}
               </div>
               
               <div className="mt-8">
-                <Button asChild className="bg-soluetude-600 hover:bg-soluetude-700">
-                  <Link to="/contact">Demander des infos</Link>
+                <Button asChild className="bg-bamba-navy hover:bg-bamba-navy/90">
+                  <Link to="/destinations">Explorer les destinations</Link>
                 </Button>
               </div>
             </div>
             
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" 
-                alt="Student studying different subjects" 
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" 
+                alt="Globe with various international destinations" 
                 className="rounded-lg shadow-xl"
               />
-              <div className="absolute -top-6 -right-6 bg-soluetude-600 text-white p-4 rounded-lg shadow-lg hidden lg:block">
+              <div className="absolute -top-6 -right-6 bg-bamba-navy text-white p-4 rounded-lg shadow-lg hidden lg:block">
                 <div className="flex items-center space-x-2">
-                  <Book size={24} />
-                  <span className="font-bold">Tous niveaux</span>
+                  <Globe size={24} />
+                  <span className="font-bold">20+ pays</span>
                 </div>
               </div>
             </div>
@@ -205,42 +206,42 @@ const Services = () => {
             {/* Process Steps */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 text-center relative z-10">
-                <div className="bg-soluetude-600 text-white w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
-                <h3 className="text-xl font-semibold mb-2">Consultation</h3>
-                <p className="text-gray-600">Nous évaluons les besoins spécifiques de l'élève et définissons des objectifs clairs.</p>
+                <div className="bg-bamba-navy text-white w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
+                <h3 className="text-xl font-semibold mb-2 text-bamba-navy">Consultation</h3>
+                <p className="text-gray-600">Nous évaluons vos objectifs, votre profil académique et définissons ensemble votre projet d'études.</p>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 text-center relative z-10">
-                <div className="bg-soluetude-600 text-white w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">2</div>
-                <h3 className="text-xl font-semibold mb-2">Sélection du tuteur</h3>
-                <p className="text-gray-600">Nous trouvons le tuteur parfait qui correspond aux besoins et à la personnalité de l'élève.</p>
+                <div className="bg-bamba-navy text-white w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">2</div>
+                <h3 className="text-xl font-semibold mb-2 text-bamba-navy">Plan personnalisé</h3>
+                <p className="text-gray-600">Nous élaborons un plan d'action complet incluant la sélection des établissements et des programmes.</p>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 text-center relative z-10">
-                <div className="bg-soluetude-600 text-white w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">3</div>
-                <h3 className="text-xl font-semibold mb-2">Plan personnalisé</h3>
-                <p className="text-gray-600">Nous élaborons un programme d'étude sur mesure adapté aux objectifs de l'élève.</p>
+                <div className="bg-bamba-navy text-white w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">3</div>
+                <h3 className="text-xl font-semibold mb-2 text-bamba-navy">Accompagnement</h3>
+                <p className="text-gray-600">Nous vous guidons à travers le processus d'admission, de demande de visa et de préparation au départ.</p>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 text-center relative z-10">
-                <div className="bg-soluetude-600 text-white w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">4</div>
-                <h3 className="text-xl font-semibold mb-2">Suivi continu</h3>
-                <p className="text-gray-600">Nous évaluons régulièrement les progrès et ajustons le programme si nécessaire.</p>
+                <div className="bg-bamba-navy text-white w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">4</div>
+                <h3 className="text-xl font-semibold mb-2 text-bamba-navy">Suivi continu</h3>
+                <p className="text-gray-600">Nous continuons à vous soutenir après votre arrivée dans votre pays d'accueil.</p>
               </div>
             </div>
             
             {/* Connection Line (hidden on mobile) */}
-            <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-soluetude-200 transform -translate-y-1/2 hidden lg:block"></div>
+            <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-bamba-navy/20 transform -translate-y-1/2 hidden lg:block"></div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-soluetude-600 text-white">
+      <section className="py-20 bg-bamba-navy text-white">
         <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Prêt à commencer ?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">Contactez-nous dès aujourd'hui pour discuter de vos besoins et découvrir comment nous pouvons vous aider.</p>
-          <Button asChild size="lg" className="bg-white text-soluetude-700 hover:bg-gray-100">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-bamba-green">Prêt à commencer votre aventure internationale ?</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">Contactez-nous dès aujourd'hui pour discuter de votre projet d'études à l'étranger et découvrir comment nous pouvons vous aider.</p>
+          <Button asChild size="lg" className="bg-white text-bamba-navy hover:bg-gray-100">
             <Link to="/contact">Prendre rendez-vous</Link>
           </Button>
         </div>
