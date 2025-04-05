@@ -16,26 +16,26 @@ const Navbar = () => {
       <div className="container flex items-center justify-between h-16">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <span className="text-2xl font-bold text-soluetude-600">SoluEtude</span>
+          <img src="/bamba-logo.png" alt="BAMBA Travel Expert" className="h-10" />
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
-          <Link to="/" className="font-medium text-gray-600 hover:text-soluetude-600 transition-colors">
+          <Link to="/" className="font-medium text-gray-600 hover:text-bamba-navy transition-colors">
             Accueil
           </Link>
-          <Link to="/about" className="font-medium text-gray-600 hover:text-soluetude-600 transition-colors">
+          <Link to="/about" className="font-medium text-gray-600 hover:text-bamba-navy transition-colors">
             À propos
           </Link>
-          <Link to="/services" className="font-medium text-gray-600 hover:text-soluetude-600 transition-colors">
+          <Link to="/services" className="font-medium text-gray-600 hover:text-bamba-navy transition-colors">
             Nos services
           </Link>
-          <Link to="/contact" className="font-medium text-gray-600 hover:text-soluetude-600 transition-colors">
+          <Link to="/contact" className="font-medium text-gray-600 hover:text-bamba-navy transition-colors">
             Contact
           </Link>
           <Link 
             to="/inscription" 
-            className="font-medium text-white bg-soluetude-600 px-4 py-2 rounded-md hover:bg-soluetude-700 transition-colors"
+            className="font-medium text-white bg-bamba-navy px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors"
           >
             Inscription
           </Link>
@@ -43,7 +43,7 @@ const Navbar = () => {
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <Button asChild className="bg-soluetude-600 hover:bg-soluetude-700">
+          <Button asChild className="bg-bamba-navy hover:bg-opacity-90">
             <Link to="/contact">Prendre rendez-vous</Link>
           </Button>
         </div>
@@ -60,41 +60,41 @@ const Navbar = () => {
           <div className="px-2 pt-2 pb-3 space-y-1 border-t">
             <Link
               to="/"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-soluetude-600 hover:bg-gray-50"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-bamba-navy hover:bg-gray-50"
               onClick={toggleMenu}
             >
               Accueil
             </Link>
             <Link
               to="/about"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-soluetude-600 hover:bg-gray-50"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-bamba-navy hover:bg-gray-50"
               onClick={toggleMenu}
             >
               À propos
             </Link>
             <Link
               to="/services"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-soluetude-600 hover:bg-gray-50"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-bamba-navy hover:bg-gray-50"
               onClick={toggleMenu}
             >
               Nos services
             </Link>
             <Link
               to="/contact"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-soluetude-600 hover:bg-gray-50"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-bamba-navy hover:bg-gray-50"
               onClick={toggleMenu}
             >
               Contact
             </Link>
             <Link
               to="/inscription"
-              className="block px-3 py-2 rounded-md text-base font-medium text-white bg-soluetude-600 hover:bg-soluetude-700"
+              className="block px-3 py-2 rounded-md text-base font-medium text-white bg-bamba-navy hover:bg-opacity-90"
               onClick={toggleMenu}
             >
               Inscription
             </Link>
             <div className="pt-2">
-              <Button asChild className="w-full bg-soluetude-600 hover:bg-soluetude-700">
+              <Button asChild className="w-full bg-bamba-navy hover:bg-opacity-90">
                 <Link to="/contact" onClick={toggleMenu}>Prendre rendez-vous</Link>
               </Button>
             </div>
