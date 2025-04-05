@@ -96,5 +96,6 @@ h1, h2, h3, h4, h5, h6 {
 /* Special styling for service titles */
 .bg-bamba-navy .text-bamba-green,
 .hero-gradient .text-bamba-green {
-  @apply text-bamba-green;
+  /* Fix for circular dependency - use direct color instead of @apply */
+  color: #8DC63F;
 }
