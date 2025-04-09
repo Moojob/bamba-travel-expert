@@ -4,13 +4,23 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Slider } from "@/components/ui/slider";
 import { Calculator, DollarSign, Landmark, Building, Utensils, BookOpen } from "lucide-react";
 
+type CountryData = {
+  tuition: number;
+  residence: number;
+  apartment: number;
+  homestay: number;
+  living: number;
+};
+
+type AccommodationType = 'residence' | 'apartment' | 'homestay';
+
 const BudgetCalculator = () => {
   const [country, setCountry] = useState<string>("canada");
   const [duration, setDuration] = useState<number>(12); // en mois
-  const [accommodationType, setAccommodationType] = useState<string>("residence");
+  const [accommodationType, setAccommodationType] = useState<AccommodationType>("residence");
   const [totalCost, setTotalCost] = useState<number>(0);
   
-  const costData = {
+  const costData: Record<string, CountryData> = {
     canada: {
       tuition: 15000, // par an
       residence: 800, // par mois
@@ -57,8 +67,8 @@ const BudgetCalculator = () => {
 
   useEffect(() => {
     // Calculer le coût total
-    const countryData = costData[country as keyof typeof costData];
-    const accommodationCost = countryData[accommodationType as keyof typeof countryData.canada] * duration;
+    const countryData = costData[country];
+    const accommodationCost = countryData[accommodationType] * duration;
     const livingCost = countryData.living * duration;
     const tuitionCost = (countryData.tuition / 12) * duration;
     

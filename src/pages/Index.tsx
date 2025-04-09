@@ -14,6 +14,10 @@ import { motion } from "framer-motion";
 const Index = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
+  const toggleFaq = (index: number) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
+
   const services = [
     {
       title: "Études universitaires",
