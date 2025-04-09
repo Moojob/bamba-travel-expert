@@ -14,9 +14,9 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 w-full bg-white border-b shadow-sm">
       <div className="container flex items-center justify-between h-16">
-        {/* Logo */}
+        {/* Logo - increased height from h-12 to h-14 */}
         <Link to="/" className="flex items-center gap-2">
-          <img src="/lovable-uploads/5ddda8bb-1a0f-433f-8fb0-e7922184a460.png" alt="BAMBA Travel Expert" className="h-12" />
+          <img src="/lovable-uploads/5ddda8bb-1a0f-433f-8fb0-e7922184a460.png" alt="BAMBA Travel Expert" className="h-14" />
         </Link>
 
         {/* Desktop Navigation */}
