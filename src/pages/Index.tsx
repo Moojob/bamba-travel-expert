@@ -7,6 +7,7 @@ import TestimonialCard from "@/components/TestimonialCard";
 import SectionTitle from "@/components/SectionTitle";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const Index = () => {
   const services = [
@@ -170,6 +171,34 @@ const Index = () => {
                     <p className="text-sm text-gray-600">Taux d'acceptation de nos dossiers</p>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Video Testimonial Section */}
+      <section className="section-padding bg-gray-50">
+        <div className="container">
+          <SectionTitle
+            title="Témoignage vidéo"
+            subtitle="Découvrez l'expérience de nos étudiants racontée en vidéo"
+            centered
+          />
+          <div className="flex justify-center">
+            <div className="w-full max-w-3xl">
+              <AspectRatio ratio={16/9} className="bg-gray-200 rounded-xl overflow-hidden shadow-lg">
+                <iframe 
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/sJGAMSvQrh8" 
+                  title="Témoignage d'étudiant - BAMBA Travel Expert"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </AspectRatio>
+              <div className="mt-6 text-center">
+                <h3 className="text-xl font-semibold">Témoignage d'Étudiants Internationaux</h3>
+                <p className="text-gray-600">Expériences vécues lors des études à l'étranger</p>
               </div>
             </div>
           </div>
