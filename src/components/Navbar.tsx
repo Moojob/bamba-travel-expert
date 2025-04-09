@@ -1,15 +1,9 @@
 
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Plane, ChevronDown } from "lucide-react";
+import { Menu, X, Plane } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { 
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,25 +43,9 @@ const Navbar = () => {
           <Link to="/" className="font-medium text-gray-600 hover:text-bamba-navy transition-colors">
             Accueil
           </Link>
-          <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center font-medium text-gray-600 hover:text-bamba-navy transition-colors">
-              Destinations <ChevronDown size={16} className="ml-1" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuItem asChild>
-                <Link to="/destinations" className="w-full">Toutes les destinations</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link to="/destinations" className="w-full">Canada</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link to="/destinations" className="w-full">Royaume-Uni</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link to="/destinations" className="w-full">Australie</Link>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <Link to="/destinations" className="font-medium text-gray-600 hover:text-bamba-navy transition-colors">
+            Destinations
+          </Link>
           <Link to="/about" className="font-medium text-gray-600 hover:text-bamba-navy transition-colors">
             À propos
           </Link>
@@ -112,32 +90,13 @@ const Navbar = () => {
             >
               Accueil
             </Link>
-            <div className="block px-3 py-2 rounded-md text-base font-medium text-gray-700">
+            <Link
+              to="/destinations"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-bamba-navy hover:bg-gray-50"
+              onClick={toggleMenu}
+            >
               Destinations
-              <div className="pl-4 mt-1 space-y-1 border-l-2 border-gray-200">
-                <Link
-                  to="/destinations"
-                  className="block px-3 py-1 rounded-md text-sm font-medium text-gray-700 hover:text-bamba-navy hover:bg-gray-50"
-                  onClick={toggleMenu}
-                >
-                  Toutes les destinations
-                </Link>
-                <Link
-                  to="/destinations"
-                  className="block px-3 py-1 rounded-md text-sm font-medium text-gray-700 hover:text-bamba-navy hover:bg-gray-50"
-                  onClick={toggleMenu}
-                >
-                  Canada
-                </Link>
-                <Link
-                  to="/destinations"
-                  className="block px-3 py-1 rounded-md text-sm font-medium text-gray-700 hover:text-bamba-navy hover:bg-gray-50"
-                  onClick={toggleMenu}
-                >
-                  Royaume-Uni
-                </Link>
-              </div>
-            </div>
+            </Link>
             <Link
               to="/about"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-bamba-navy hover:bg-gray-50"
