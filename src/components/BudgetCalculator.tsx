@@ -76,6 +76,14 @@ const BudgetCalculator = () => {
     setTotalCost(Math.round(total));
   }, [country, duration, accommodationType]);
 
+  // Fonction pour gérer le changement de type d'hébergement avec validation de type
+  const handleAccommodationChange = (value: string) => {
+    // Vérifier que la valeur est du type AccommodationType avant de la définir
+    if (value === 'residence' || value === 'apartment' || value === 'homestay') {
+      setAccommodationType(value);
+    }
+  };
+
   return (
     <div className="max-w-3xl mx-auto p-6 bg-white rounded-xl shadow-md">
       <div className="flex items-center mb-6 text-bamba-navy">
@@ -103,7 +111,7 @@ const BudgetCalculator = () => {
 
         <div>
           <label className="block mb-2 font-medium">Type de logement</label>
-          <Select value={accommodationType} onValueChange={setAccommodationType}>
+          <Select value={accommodationType} onValueChange={handleAccommodationChange}>
             <SelectTrigger>
               <SelectValue placeholder="Choisissez un type de logement" />
             </SelectTrigger>
