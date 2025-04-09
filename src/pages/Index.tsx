@@ -1,5 +1,4 @@
-
-import { Plane, GraduationCap, Globe, Map, Briefcase, Languages } from "lucide-react";
+import { Plane, GraduationCap, Globe, Map, Briefcase, Languages, ChevronDown, ChevronUp, Calculator, BarChart, PieChart, Award, Clock } from "lucide-react";
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import ServiceCard from "@/components/ServiceCard";
@@ -8,8 +7,13 @@ import SectionTitle from "@/components/SectionTitle";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { useState } from "react";
+import BudgetCalculator from "@/components/BudgetCalculator";
+import { motion } from "framer-motion";
 
 const Index = () => {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
   const services = [
     {
       title: "Études universitaires",
@@ -73,9 +77,34 @@ const Index = () => {
     },
   ];
 
+  const faqItems = [
+    {
+      question: "Quels sont les documents requis pour un visa étudiant ?",
+      answer: "Les documents généralement requis comprennent une lettre d'acceptation d'une institution reconnue, une preuve de moyens financiers, un passeport valide, des relevés bancaires, et parfois une preuve de compétence linguistique comme le TOEFL ou IELTS. Notez que les exigences varient selon le pays de destination."
+    },
+    {
+      question: "Puis-je travailler pendant mes études à l'étranger ?",
+      answer: "Oui, de nombreux pays permettent aux étudiants internationaux de travailler à temps partiel pendant leurs études. Par exemple, au Canada et en Australie, vous pouvez généralement travailler jusqu'à 20 heures par semaine pendant les sessions d'études, et à temps plein pendant les vacances."
+    },
+    {
+      question: "Quelles sont les bourses disponibles pour les étudiants internationaux ?",
+      answer: "De nombreuses bourses sont disponibles, notamment des bourses gouvernementales, institutionnelles, et privées. Nos conseillers peuvent vous aider à identifier les opportunités de financement adaptées à votre profil et à vos objectifs académiques."
+    },
+    {
+      question: "Comment puis-je obtenir un titre de séjour permanent après mes études ?",
+      answer: "Plusieurs pays comme le Canada, l'Australie et la Nouvelle-Zélande offrent des voies d'accès à la résidence permanente pour les diplômés internationaux. Nos experts en immigration peuvent vous guider tout au long de ce processus et vous aider à maximiser vos chances."
+    },
+  ];
+
+  const statistics = [
+    { icon: <Award size={28} />, value: "98%", label: "Taux de réussite des demandes de visa" },
+    { icon: <GraduationCap size={28} />, value: "5000+", label: "Étudiants accompagnés" },
+    { icon: <Globe size={28} />, value: "20+", label: "Pays de destination" },
+    { icon: <Clock size={28} />, value: "15", label: "Années d'expertise" },
+  ];
+
   return (
     <Layout>
-      {/* Hero Section */}
       <Hero 
         title="Réalisez votre rêve d'études à l'étranger"
         subtitle="Accompagnement personnalisé pour votre projet d'études internationales et d'immigration"
@@ -84,9 +113,26 @@ const Index = () => {
         primaryButtonLink="/contact"
         secondaryButtonText="Nos services"
         secondaryButtonLink="/services"
-      />
+      >
+        <div className="mt-12 p-4 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {statistics.map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.2 }}
+                className="text-center"
+              >
+                <div className="flex justify-center mb-2 text-white/80">{stat.icon}</div>
+                <h3 className="text-2xl font-bold text-white">{stat.value}</h3>
+                <p className="text-sm text-white/80">{stat.label}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </Hero>
 
-      {/* Services Section */}
       <section className="section-padding bg-gray-50">
         <div className="container">
           <SectionTitle
@@ -96,13 +142,19 @@ const Index = () => {
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
-              <ServiceCard key={index} {...service} />
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <ServiceCard {...service} />
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
       <section className="section-padding bg-white">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -177,7 +229,17 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Video Testimonial Section */}
+      <section className="section-padding bg-gray-50">
+        <div className="container">
+          <SectionTitle
+            title="Calculez votre budget d'études"
+            subtitle="Estimez le coût de vos études à l'étranger selon votre destination"
+            centered
+          />
+          <BudgetCalculator />
+        </div>
+      </section>
+
       <section className="section-padding bg-gray-50">
         <div className="container">
           <SectionTitle
@@ -205,7 +267,38 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Destinations Section */}
+      <section className="section-padding bg-white">
+        <div className="container">
+          <SectionTitle
+            title="Questions fréquentes"
+            subtitle="Des réponses à vos interrogations sur les études à l'étranger et l'immigration"
+            centered
+          />
+          <div className="max-w-3xl mx-auto mt-8">
+            {faqItems.map((item, index) => (
+              <div key={index} className="mb-4">
+                <button
+                  onClick={() => toggleFaq(index)}
+                  className="w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 rounded-lg transition-all duration-200"
+                >
+                  <span className="font-medium text-left">{item.question}</span>
+                  {openFaq === index ? (
+                    <ChevronUp size={20} className="text-bamba-navy flex-shrink-0" />
+                  ) : (
+                    <ChevronDown size={20} className="text-bamba-navy flex-shrink-0" />
+                  )}
+                </button>
+                {openFaq === index && (
+                  <div className="p-4 bg-gray-50 rounded-b-lg -mt-1 text-gray-700">
+                    {item.answer}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="section-padding bg-gray-50">
         <div className="container">
           <SectionTitle
@@ -215,9 +308,13 @@ const Index = () => {
           />
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
             {['Canada', 'Royaume-Uni', 'Australie', 'États-Unis', 'France', 'Allemagne'].map((country) => (
-              <div key={country} className="bg-white p-4 rounded-lg shadow-sm border hover:shadow-md transition-shadow">
+              <motion.div
+                key={country}
+                whileHover={{ scale: 1.05 }}
+                className="bg-white p-4 rounded-lg shadow-sm border hover:shadow-md transition-shadow cursor-pointer"
+              >
                 <h3 className="font-semibold text-bamba-navy">{country}</h3>
-              </div>
+              </motion.div>
             ))}
           </div>
           <div className="text-center mt-8">
@@ -228,7 +325,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
       <section className="section-padding testimonial-gradient">
         <div className="container">
           <SectionTitle
@@ -238,20 +334,44 @@ const Index = () => {
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
-              <TestimonialCard key={index} {...testimonial} />
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.2 }}
+              >
+                <TestimonialCard {...testimonial} />
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-20 hero-gradient text-white">
-        <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Prêt à concrétiser votre projet d'études à l'étranger ?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">Contactez-nous dès aujourd'hui pour discuter de votre projet et découvrir comment nous pouvons vous aider à réaliser votre rêve d'étudier à l'international.</p>
-          <Button asChild size="lg" className="bg-white text-bamba-navy hover:bg-gray-100">
-            <Link to="/contact">Prendre rendez-vous</Link>
-          </Button>
+        <div className="container">
+          <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Prêt à transformer votre avenir ?</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-semibold mb-4 flex items-center">
+                  <GraduationCap className="mr-2" /> Pour les étudiants
+                </h3>
+                <p className="mb-4">Accédez aux meilleures universités à l'étranger et construisez votre future carrière avec notre accompagnement personnalisé.</p>
+                <Button asChild size="lg" className="w-full bg-white text-bamba-navy hover:bg-gray-100">
+                  <Link to="/contact">Consultation étudiante</Link>
+                </Button>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-4 flex items-center">
+                  <Briefcase className="mr-2" /> Pour l'immigration
+                </h3>
+                <p className="mb-4">Concrétisez votre projet d'immigration grâce à notre expertise et maximisez vos chances de succès.</p>
+                <Button asChild size="lg" className="w-full bg-bamba-green text-white hover:bg-bamba-green/90">
+                  <Link to="/contact">Consultation immigration</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </Layout>
