@@ -1,9 +1,8 @@
-
 import Layout from "@/components/Layout";
 import SectionTitle from "@/components/SectionTitle";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Book, BookOpen, Target, Award, Clock, Users, Lightbulb, CheckCircle, ArrowRight, Sparkles, GraduationCap, Briefcase, Globe, Map, Languages, Plane, Passport, FileCheck, BookMarked, Building } from "lucide-react";
+import { Book, BookOpen, Target, Award, Clock, Users, Lightbulb, CheckCircle, ArrowRight, Sparkles, GraduationCap, Briefcase, Globe, Map, Languages, Plane, FileCheck, BookMarked, Building } from "lucide-react";
 import ServiceCard from "@/components/ServiceCard";
 
 const Services = () => {
@@ -69,7 +68,7 @@ const Services = () => {
     {
       title: "Visa de travail",
       description: "Obtention de visas de travail et permis pour une expatriation professionnelle réussie.",
-      icon: <Passport className="h-10 w-10 text-bamba-navy" />,
+      icon: <FileCheck className="h-10 w-10 text-bamba-navy" />,
       features: [
         "Identification des opportunités",
         "Constitution des dossiers",
@@ -133,7 +132,6 @@ const Services = () => {
 
   return (
     <Layout>
-      {/* Hero Section */}
       <section className="relative py-20 bg-bamba-navy text-white">
         <div className="container">
           <div className="max-w-3xl">
@@ -148,7 +146,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Tab Navigation */}
       <section className="py-8 bg-white border-b">
         <div className="container">
           <div className="flex flex-wrap justify-center gap-4">
@@ -165,7 +162,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Primary Services Section - Studies */}
       <section id="etudes" className="section-padding bg-white">
         <div className="container">
           <SectionTitle 
@@ -202,7 +198,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Specialized Services Section - Studies */}
       <section className="section-padding bg-gray-50">
         <div className="container">
           <SectionTitle 
@@ -227,7 +222,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Immigration Services Section */}
       <section id="immigration" className="section-padding bg-white">
         <div className="container">
           <SectionTitle 
@@ -264,7 +258,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Specialized Immigration Services */}
       <section className="section-padding bg-gray-50">
         <div className="container">
           <SectionTitle 
@@ -289,7 +282,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Destinations Section */}
       <section id="destinations" className="section-padding bg-white">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -331,7 +323,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* How It Works Section */}
       <section className="section-padding bg-gray-50">
         <div className="container">
           <SectionTitle 
@@ -341,7 +332,6 @@ const Services = () => {
           />
           
           <div className="relative">
-            {/* Process Steps */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 text-center relative z-10">
                 <div className="bg-bamba-navy text-white w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
@@ -368,13 +358,11 @@ const Services = () => {
               </div>
             </div>
             
-            {/* Connection Line (hidden on mobile) */}
             <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-bamba-navy/20 transform -translate-y-1/2 hidden lg:block"></div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-20 bg-bamba-navy text-white">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-bamba-green">Prêt à concrétiser votre projet international ?</h2>
