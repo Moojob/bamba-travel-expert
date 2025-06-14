@@ -125,7 +125,7 @@ const Destinations = () => {
 
       <section className="py-20 hero-gradient text-white">
         <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Besoin d'aide pour choisir votre destination?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-bamba-green">Besoin d'aide pour choisir votre destination?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">Nos conseillers sont là pour vous aider à trouver la destination qui correspond le mieux à votre profil et à vos objectifs académiques.</p>
           <Button asChild size="lg" className="bg-white text-bamba-navy hover:bg-gray-100">
             <Link to="/contact">Prendre rendez-vous</Link>

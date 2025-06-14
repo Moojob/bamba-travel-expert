@@ -78,28 +78,28 @@ const Services = () => {
     },
   ];
 
-  const specializedServices = [
-    {
-      title: "Préparation linguistique",
-      description: "Cours de langues et préparation aux tests de langue requis pour étudier à l'étranger.",
-      icon: <Languages className="h-6 w-6 text-bamba-navy" />,
-    },
-    {
-      title: "Programmes d'échange",
-      description: "Découvrez les programmes d'échange accessibles et enrichissants pour votre parcours.",
-      icon: <Globe className="h-6 w-6 text-bamba-navy" />,
-    },
-    {
-      title: "Bourses d'études",
-      description: "Identification et demande de bourses d'études pour financer votre projet international.",
-      icon: <Award className="h-6 w-6 text-bamba-navy" />,
-    },
-    {
-      title: "Accompagnement à l'installation",
-      description: "Support complet pour faciliter votre arrivée et installation dans votre pays d'accueil.",
-      icon: <Plane className="h-6 w-6 text-bamba-navy" />,
-    },
-  ];
+  // const specializedServices = [
+  //   {
+  //     title: "Préparation linguistique",
+  //     description: "Cours de langues et préparation aux tests de langue requis pour étudier à l'étranger.",
+  //     icon: <Languages className="h-6 w-6 text-bamba-navy" />,
+  //   },
+  //   {
+  //     title: "Programmes d'échange",
+  //     description: "Découvrez les programmes d'échange accessibles et enrichissants pour votre parcours.",
+  //     icon: <Globe className="h-6 w-6 text-bamba-navy" />,
+  //   },
+  //   {
+  //     title: "Bourses d'études",
+  //     description: "Identification et demande de bourses d'études pour financer votre projet international.",
+  //     icon: <Award className="h-6 w-6 text-bamba-navy" />,
+  //   },
+  //   {
+  //     title: "Accompagnement à l'installation",
+  //     description: "Support complet pour faciliter votre arrivée et installation dans votre pays d'accueil.",
+  //     icon: <Plane className="h-6 w-6 text-bamba-navy" />,
+  //   },
+  // ];
 
   const immigrationSpecialized = [
     {
@@ -125,24 +125,34 @@ const Services = () => {
   ];
 
   const destinations = [
-    "Canada", "Royaume-Uni", "Australie", "États-Unis", 
-    "France", "Allemagne", "Espagne", "Italie",
-    "Suisse", "Belgique", "Irlande", "Nouvelle-Zélande",
+    "Canada",
+    "Royaume-Uni",
+    "Australie",
+    "États-Unis",
+    "France",
+    "Allemagne",
   ];
 
   return (
     <Layout>
-      <section className="relative py-20 bg-bamba-navy text-white">
+      <section className="relative py-16 bg-bamba-navy text-white overflow-hidden">
         <div className="container">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-bamba-green">Nos services</h1>
-            <p className="text-xl md:text-2xl">
-              Des solutions complètes pour concrétiser vos projets d'études et d'immigration à l'international.
-            </p>
+          <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+            <div className="order-2 md:order-1">
+              <h1 className="text-xl md:text-4xl font-bold mb-3">Faites de vos ambitions <br /> une réalité...</h1>
+              <p className="text-base md:text-xl text-white/90">
+              Nous vous accompagnons à chaque étape pour concrétiser vos projets d'études et d'immigration à l'international grâce à des solutions sur mesure, fiables et efficaces.
+              </p>
+            </div>
+            <div className="order-1 md:order-2 relative">
+              <div className="absolute inset-0 bg-gradient-to-l from-bamba-navy to-transparent z-10"></div>
+              <img 
+                src="/section-service.png" 
+                alt="" 
+                className="w-full h-96 opacity-70 md:h-80 object-cover rounded-lg shadow-lg"
+              />
+            </div>
           </div>
-        </div>
-        <div className="absolute bottom-0 right-0 w-1/3 h-full bg-contain bg-no-repeat bg-right-bottom opacity-10"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')" }}>
         </div>
       </section>
 
@@ -198,7 +208,7 @@ const Services = () => {
         </div>
       </section>
 
-      <section className="section-padding bg-gray-50">
+      {/* <section className="section-padding bg-gray-50">
         <div className="container">
           <SectionTitle 
             title="Services spécialisés pour vos études"
@@ -220,7 +230,7 @@ const Services = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section id="immigration" className="section-padding bg-white">
         <div className="container">
@@ -308,14 +318,15 @@ const Services = () => {
             
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" 
+                src="img_2.png" 
+              
                 alt="Globe with various international destinations" 
-                className="rounded-lg shadow-xl"
+                className="rounded-lg shadow-3xl"
               />
-              <div className="absolute -top-6 -right-6 bg-bamba-navy text-white p-4 rounded-lg shadow-lg hidden lg:block">
-                <div className="flex items-center space-x-2">
-                  <Globe size={24} />
-                  <span className="font-bold">20+ pays</span>
+              <div className="absolute -top-5 -right-3 bg-bamba-navy text-white p-4 rounded-lg shadow-lg hidden lg:block">
+                <div className="flex items-center space-x-4">
+                  <Globe size={12} />
+                  <span className="font-bold">6+ pays</span>
                 </div>
               </div>
             </div>
@@ -365,8 +376,8 @@ const Services = () => {
 
       <section className="py-20 bg-bamba-navy text-white">
         <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-bamba-green">Prêt à concrétiser votre projet international ?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">Contactez-nous dès aujourd'hui pour discuter de votre projet d'études ou d'immigration et découvrir comment nous pouvons vous aider.</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-bamba-green">Envie de passer à l’action pour votre projet international ?</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">Prenez contact avec nous dès aujourd’hui pour échanger sur votre projet d’études ou d’immigration, et découvrez comment nous pouvons vous accompagner.</p>
           <Button asChild size="lg" className="bg-white text-bamba-navy hover:bg-gray-100">
             <Link to="/contact">Prendre rendez-vous</Link>
           </Button>

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Plane } from "lucide-react";
@@ -14,26 +13,23 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 w-full bg-white border-b shadow-sm">
       <div className="container flex items-center justify-between h-16">
-        {/* Logo - increased height from h-12 to h-14 */}
+        {/* Logo - increased height from h-16 to h-20 */}
         <Link to="/" className="flex items-center gap-2">
-          <img src="/lovable-uploads/5ddda8bb-1a0f-433f-8fb0-e7922184a460.png" alt="BAMBA Travel Expert" className="h-14" />
+          <img src="logo_bamba-removebg-preview.png" alt="BAMBA Travel Expert" className="h-20" />
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
-          <Link to="/" className="font-medium text-gray-600 hover:text-bamba-navy transition-colors">
+          <Link to="/" className="font-medium text-bamba-navy hover:text-bamba-dark-navy transition-colors">
             Accueil
           </Link>
-          <Link to="/about" className="font-medium text-gray-600 hover:text-bamba-navy transition-colors">
-            À propos
-          </Link>
-          <Link to="/services" className="font-medium text-gray-600 hover:text-bamba-navy transition-colors">
+          <Link to="/services" className="font-medium text-bamba-navy hover:text-bamba-dark-navy transition-colors">
             Nos services
           </Link>
-          <Link to="/destinations" className="font-medium text-gray-600 hover:text-bamba-navy transition-colors">
+          <Link to="/destinations" className="font-medium text-bamba-navy hover:text-bamba-dark-navy transition-colors">
             Destinations
           </Link>
-          <Link to="/contact" className="font-medium text-gray-600 hover:text-bamba-navy transition-colors">
+          <Link to="/contact" className="font-medium text-bamba-navy hover:text-bamba-dark-navy transition-colors">
             Contact
           </Link>
         </nav>
@@ -64,13 +60,6 @@ const Navbar = () => {
               onClick={toggleMenu}
             >
               Accueil
-            </Link>
-            <Link
-              to="/about"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-bamba-navy hover:bg-gray-50"
-              onClick={toggleMenu}
-            >
-              À propos
             </Link>
             <Link
               to="/services"
