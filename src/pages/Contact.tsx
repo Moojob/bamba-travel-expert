@@ -41,7 +41,7 @@ const Contact = () => {
         throw new Error('Le formulaire n\'est pas correctement initialisé');
       }
 
-      console.log('Envoi du formulaire avec les données:', formData);
+      //console.log('Envoi du formulaire avec les données:', formData);
       
       // Utilisation exclusive de import.meta.env pour Vite
       const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
@@ -52,7 +52,7 @@ const Contact = () => {
         throw new Error('Les identifiants EmailJS ne sont pas correctement configurés dans les variables d\'environnement');
       }
 
-      console.log('Envoi avec les paramètres:', { serviceId, templateId, publicKey });
+   //   console.log('Envoi avec les paramètres:', { serviceId, templateId, publicKey });
 
       const result = await emailjs.sendForm(
         serviceId,
@@ -61,7 +61,7 @@ const Contact = () => {
         publicKey
       );
 
-      console.log('EmailJS response:', result);
+      //console.log('EmailJS response:', result);
       
       if (result.status === 200) {
         toast.success('Message envoyé avec succès !');
@@ -76,7 +76,7 @@ const Contact = () => {
         throw new Error('Erreur lors de l\'envoi du message');
       }
     } catch (error) {
-      console.error('Erreur détaillée:', error);
+     // console.error('Erreur détaillée:', error);
       toast.error(`Erreur: ${error instanceof Error ? error.message : 'Une erreur inconnue est survenue'}`);
     } finally {
       setIsSubmitting(false);
