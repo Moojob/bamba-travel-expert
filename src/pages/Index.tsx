@@ -181,24 +181,25 @@ const Index = () => {
         <div className="container">
           <SectionTitle
             title="Témoignage vidéo"
-            subtitle="Découvrez l'expérience de nos étudiants racontée en vidéo"
+            subtitle="Découvrez le parcours de nos étudiants à l'international"
             centered
           />
-          <div className="flex justify-center">
-            <div className="w-full max-w-3xl">
-              <AspectRatio ratio={16/9} className="bg-gray-200 rounded-xl overflow-hidden shadow-lg">
-                <iframe 
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/sJGAMSvQrh8" 
-                  title="Témoignage d'étudiant - BAMBA Travel Expert"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </AspectRatio>
-              <div className="mt-6 text-center">
-                <h3 className="text-xl font-semibold">Témoignage d'Étudiants Internationaux</h3>
-                <p className="text-gray-600">Expériences vécues lors des études à l'étranger</p>
-              </div>
+          
+          <div className="max-w-2xl mx-auto mt-12">
+            <div className="aspect-[9/16] w-full max-w-md mx-auto rounded-xl overflow-hidden shadow-xl bg-black">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/DMKGUzt7pFw?autoplay=0&showinfo=0&controls=1"
+                title="Témoignage étudiant - BAMBA Travel Expert"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div className="mt-6 text-center">
+              <h3 className="text-xl font-semibold">Pape Maguette Large</h3>
+              <p className="text-gray-600">Étudiant international</p>
+              <p className="mt-4 text-gray-700">Découvrez l'expérience de Pape Maguette, étudiant parti à l'étranger grâce à BAMBA Travel Expert.</p>
             </div>
           </div>
         </div>
