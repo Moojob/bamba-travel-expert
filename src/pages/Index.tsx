@@ -2,7 +2,7 @@ import { Plane, GraduationCap, Globe, Map, Briefcase, Languages } from "lucide-r
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import ServiceCard from "@/components/ServiceCard";
-import TestimonialCard from "@/components/TestimonialCard";
+//import TestimonialCard from "@/components/TestimonialCard";
 import SectionTitle from "@/components/SectionTitle";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -229,7 +229,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="section-padding testimonial-gradient">
+      {/* <section className="section-padding testimonial-gradient">
         <div className="container">
           <SectionTitle
             title="Témoignages d'étudiants"
@@ -242,7 +242,7 @@ const Index = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 hero-gradient text-white">

@@ -13,13 +13,13 @@ const Footer = () => {
               BAMBA Travel Expert vous accompagne dans votre projet d'études à l'étranger et d'immigration avec un service personnalisé et professionnel.
             </p>
             <div className="flex items-center space-x-4">
-              <a href="#" className="flex items-center justify-center w-14 h-14">
+              <a href="https://web.facebook.com/bambatravelexpert/" className="flex items-center justify-center w-14 h-14">
                 <img src="/facebook.png" alt="Facebook" className="h-6 w-6 object-contain" />
               </a>
-              <a href="#" className="flex items-center justify-center w-14 h-14">
+              <a href="https://www.instagram.com/bambatravelexpert/" className="flex items-center justify-center w-14 h-14">
                 <img src="/instagram.png" alt="Instagram" className="h-6 w-6 object-contain" />
               </a>
-              <a href="#" className="flex items-center justify-center w-9 h-9">
+              <a href="https://www.tiktok.com/@776562540bambatravel?_t=ZS-8xJsUFECKll&_r=1" className="flex items-center justify-center w-9 h-9">
                 <img src="/tiktok.png" alt="TikTok" className="h-7 w-7 object-contain" />
               </a>
             </div>
